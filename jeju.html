@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+
+	<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Lato:300,400,700" />
+	<link rel="stylesheet" type="text/css" href="jquery.pagepiling.css" />
+
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+	<script type="text/javascript" src="jquery.pagepiling.min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+	    	$('#pagepiling').pagepiling({
+	    		anchors: ['page1', 'page2', 'page3'],
+			    sectionsColor: ['#bfda00', '#d08924', '#777777'],
+			});
+	    });
+    </script>
+
+    <style>
+
+		.section {text-align:center;}
+
+		#video{
+			position: absolute;
+			z-index: 4;
+			left: 0;
+			bottom: 0;
+			top:0;
+			right:0;
+			width: 100%;
+			height: 100%;
+	 		background-color: black;
+	  	background-size: contain;
+	   	object-fit: cover;
+		}
+
+		#section1 .layer{
+			position: absolute;
+			z-index: 5;
+			width: 100%;
+			left: 0;
+			top: 43%;
+			height: 100%;
+		}
+
+		#section1 h1 {color:#ffffff; font-size:6em;}
+		#seoul p { padding-top:3%;}
+		#jeju img { padding-top:7%;}
+    #jeju p { padding-top:3%;}
+
+
+    </style>
+
+</head>
+
+<body>
+
+	<header>
+		<a href="index.html"><img src="img/logo.png"></a>
+
+		<nav id="sub_menu">
+			<ul>
+				<li><a href="city.html">SEOUL</a></li>
+				<li><a href="jeju.html">JEJU</a></li>
+				<li><a href="#">ULLEUNGDO</a></li>
+			</ul>
+			</nav>
+			<nav id="menu">
+				<ul>
+					<li><a href="cul.html">FOOD</a></li>
+					<li><a href="city.html">CITY</a></li>
+					<li><a href="food.html">CULTURE</a></li>
+				</ul>
+				</nav>
+	</header>
+
+	<div id="pagepiling">
+	    <div class="section" id="section1">
+	    	<video autoplay loop muted id="video">
+				<source src="img/jeju.mp4" type="video/mp4">
+			</video>
+			<div class="layer">
+				<h1>Jeju Island</h1>
+			</div>
+    	</div>
+
+
+	    <div class="section">
+				<div id="jeju">
+					<img src="img/jeju.jpg" alt="">
+	    		<p><h1>제주도</h1> <br>
+				   제주특별자치도는 대한민국의 제주도와 부속 섬들을 관할하는 특별자치도이다.<br>
+           대한민국에서 가장 큰 섬인 제주도 본섬을 비롯하여 마라도, 우도, 추자군도 등을<br>
+           포함한 유인도 8개, 무인도 55개로 구성되어 있다.</p>
+	    </div></div>
+
+
+	    <div class="section">
+				<div id="jeju">
+				<img src="img/jeju2.png">
+				<img src="img/jeju3.jpg">
+        <p>제주도는 중앙의 한라산을 중심으로 완만한 경사를 이루어 동서 73 km, 남북 31km의 타원형 모양을 하고 있다.<br>
+        학술·문화·관광·생태 등의 가치와 중요성을 인정받아 2007년 6월, 제주 화산섬과 용암 동굴이라는 이름으로 세계자연유산에 등록되었다. <br>
+        2010년 10월 3일 유네스코 세계지질공원네트워크(GGN)가 제주도 지역에 세계지질공원을 인증했다.</p>
+		 </div>
+	</div>
+
+</body>
+</html>
